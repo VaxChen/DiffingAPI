@@ -64,6 +64,7 @@ public class ApiController {
 						diff.put("length", length);
 						list.add(diff);
 					}
+					i++;
 					
 				}
 				result.put("diffs", list);
