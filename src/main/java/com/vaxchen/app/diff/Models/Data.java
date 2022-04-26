@@ -2,21 +2,29 @@ package com.vaxchen.app.diff.Models;
 
 import javax.persistence.*;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 @Entity
 public class Data {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	
 	@Column
-	private String content;
+	private String data;
 	
 	
-	public Data(int id, String content) {
-		super();
+	public Data(int id, String data) {
 		this.id = id;
-		this.content = content;
+		this.data = data;
+	}
+	
+	public Data(String data) {
+		this.data = data;
+	}
+	
+	public Data() {
+
 	}
 	
 	public int getId() {
@@ -25,11 +33,11 @@ public class Data {
 	public void setId(int id) {
 		this.id = id;
 	}
-	public String getContent() {
-		return content;
+	public String getdata() {
+		return data;
 	}
-	public void setContent(String content) {
-		this.content = content;
+	public void setdata(String data) {
+		this.data = data;
 	}
 
 }
